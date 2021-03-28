@@ -55,7 +55,7 @@ object RecordFinder {
 
     val records = spark.read.textFile("Records.txt")
 
-    val queries = spark.read.textFile("Queries.txt").filter("value == 'YSJNPIT'")
+    val queries = spark.read.textFile("Queries.txt")
 
     val outputDF = getMatchingRecords(spark, records, queries);
 
